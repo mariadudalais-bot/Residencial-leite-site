@@ -196,17 +196,21 @@ nav.main-nav a.active::after {
 @media (max-width: 760px) {
   nav.main-nav {
     position: fixed;
-    inset: 64px 0 0 0;
+    inset: 0;
     background: var(--cream);
+    opacity: 1;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 1.4rem;
-    padding: 2rem 1.5rem;
-    transform: translateY(-110%);
-    transition: transform 0.25s ease;
+    padding: 5.5rem 1.5rem 2rem;
+    z-index: 999;
+    display: none;
+    overflow-y: auto;
   }
-  nav.main-nav.open { transform: translateY(0); }
-  .menu-btn { display: block; }
+  nav.main-nav.open { display: flex; }
+  nav.main-nav a { font-size: 1.1rem; width: 100%; }
+  .menu-btn { display: block; position: relative; z-index: 1000; }
 }
 
 /* ---------- Hero ---------- */
